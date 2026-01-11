@@ -1,0 +1,57 @@
+📘 Spiegazione del Programma Diario Attività 
+🎯 Obiettivo del programma 
+Il programma Diario Attività ha lo scopo di permettere all’utente di registrare, visualizzare e gestire un insieme di attività quotidiane. Ogni attività contiene una descrizione, un orario di inizio, un orario di fine e una data. Il diario salva automaticamente i dati su file, così da mantenere lo storico anche dopo la chiusura del programma.
+
+🧱 Struttura generale del progetto
+Il progetto è organizzato in due classi principali:
+
+1. Classe Attivita
+Rappresenta una singola attività.
+Ogni oggetto contiene:
+
+descrizione
+
+ora_inizio
+
+ora_fine
+
+data
+
+Il costruttore inizializza questi campi a partire dai valori passati dall’utente.
+
+2. Classe DiarioAttivita
+Gestisce l’intero diario.
+Le sue responsabilità includono:
+
+Caricare le attività dal file all’avvio del programma
+
+Salvare le attività su file alla chiusura
+
+Aggiungere nuove attività
+
+Visualizzare le attività esistenti
+
+Eventualmente rimuovere o modificare attività (in base alle funzioni implementate)
+
+Il costruttore imposta il nome del file (attivita.txt) e richiama la funzione di caricamento.
+Il distruttore salva automaticamente tutte le attività su file quando il programma termina.
+
+💾 Gestione del file
+Il diario utilizza un file di testo (attivita.txt) per memorizzare le attività.
+Questo permette di:
+
+mantenere i dati persistenti
+
+evitare la perdita delle informazioni
+
+leggere e riscrivere il contenuto in modo semplice
+
+⚙️ Funzionamento generale
+All’avvio, il programma carica le attività già presenti nel file.
+
+L’utente può aggiungere nuove attività fornendo descrizione, orari e data.
+
+Le attività vengono memorizzate in un contenitore (es. vector).
+
+Alla chiusura, il diario salva automaticamente tutto su file.
+
