@@ -1,6 +1,6 @@
-#📘Spiegazione semplice del programma Diario Attività
+🟦 DIARIO ATTIVITÀ – SPIEGAZIONE SEMPLICE
 
-##🎯 A cosa serve il programma
+🟩 A COSA SERVE IL PROGRAMMA
 
 Il programma permette di registrare attività con:
 
