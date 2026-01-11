@@ -1,4 +1,4 @@
-##📘Spiegazione semplice del programma Diario Attività
+#📘Spiegazione semplice del programma Diario Attività
 
 ##🎯 A cosa serve il programma
 
