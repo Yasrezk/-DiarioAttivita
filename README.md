@@ -1,69 +1,49 @@
-​📓 Diario delle Attività (Activity Diary)
+# 📓 Diario delle Attività C++
 
-🟩 A COSA SERVE IL PROGRAMMA
+Benvenuto nel repository del mio **Diario delle Attività**! Questo progetto è un'applicazione da riga di comando sviluppata in C++ per aiutare gli utenti a organizzare la propria giornata in modo semplice ed efficiente.
 
-Il programma permette di registrare attività con:
+---
 
-descrizione
+## 🎯 A cosa serve il programma
+Il programma permette di gestire un registro digitale dei propri impegni. Per ogni attività, è possibile salvare:
+* **Descrizione**: Cosa bisogna fare.
+* **Ora di inizio**: Quando inizia l'attività.
+* **Ora di fine**: Quando termina.
+* **Data**: Il giorno specifico dell'impegno.
 
-ora di inizio
+> 💾 **Persistenza dei dati**: Tutte le attività vengono salvate automaticamente in un file chiamato `attivita.txt`. Questo significa che i tuoi dati non andranno persi quando chiudi il programma!
 
-ora di fine
+---
 
-data
+## 🏗️ Com'è fatto il programma (Logica Tecnica)
 
-Tutte le attività vengono salvate in un file chiamato attivita.txt, così non si perdono quando chiudi il programma.
+Il codice è organizzato in modo modulare per essere facile da leggere e mantenere:
 
-##🧱 Come è fatto il programma
+### 1. Classe `Attivita`
+Rappresenta il modello dei dati. Ogni volta che crei una nuova attività, il **costruttore** della classe si occupa di inizializzare:
+* La descrizione del compito.
+* Gli orari di inizio e fine.
+* La validazione della data.
 
-1. Classe Attivita
+### 2. Classe `DiarioAttivita`
+È il "cervello" del progetto. Gestisce una collezione di oggetti `Attivita` usando:
+* `std::vector`: Per memorizzare la lista dinamica degli impegni.
+* `std::map`: Per organizzare le attività in base alla data, rendendo la ricerca molto veloce.
 
-2.Rappresenta una singola attività.
-Quando crei un’attività nuova, il costruttore salva:
+---
 
-descrizione
+## 🚀 Funzionalità principali
+1. **➕ Aggiungi**: Inserimento di nuove attività con salvataggio su file.
+2. **👁️ Visualizza Giorno**: Filtra e mostra solo gli impegni di una data specifica.
+3. **📋 Visualizza Tutto**: Mostra l'elenco completo di tutte le attività salvate.
+4. **🗑️ Elimina**: Rimuove un'attività specifica dal diario.
+5. **🧹 Pulizia Schermo**: Interfaccia pulita grazie alla funzione cross-platform (`cls` su Windows, `clear` su Linux).
 
-ora di inizio
+---
 
-ora di fine
+## 🛠️ Requisiti e Compilazione
+Per eseguire questo programma, hai bisogno di un compilatore C++ (come GCC o Clang).
 
-data
-
-Questi valori vengono passati dall’utente.
-
-2. Classe DiarioAttivita
-Gestisce l’intero diario.
-
-Fa tre cose principali:
-
-All’avvio: carica le attività dal file
-
-Durante l’uso: permette di aggiungere attività
-
-Alla chiusura: salva tutto nel file
-
-Il costruttore imposta il nome del file e chiama la funzione che legge i dati.
-Il distruttore salva automaticamente le attività quando il programma termina.
-
-##💾 Come funziona il salvataggio
-
-Il programma usa un file di testo chiamato attivita.txt.
-Questo file contiene tutte le attività registrate.
-Ogni volta che chiudi il programma, il diario riscrive il file aggiornato.
-
-##⚙️ Funzionamento in breve
-
-Il programma si avvia e legge il file.
-
-L’utente aggiunge una o più attività.
-
-Le attività vengono memorizzate in un vettore.
-
-Alla fine, il programma salva tutto nel file.
-
-Organizzazione Avanzata: Utilizza le mappe (std::map) per collegare le attività a date specifiche e i vettori (std::vector) per gestire liste dinamiche di impegni.
-Interfaccia Intuitiva: Un menu numerato permette di navigare facilmente tra le opzioni:
-Aggiunta di nuove attività.
-Visualizzazione filtrata per giorno.
-Visualizzazione dell'intero archivio.
-Eliminazione di record specifici.
+**Comando per la compilazione:**
+```bash
+g++ main.cpp DiarioAttivita.cpp -o DiarioAttivita
