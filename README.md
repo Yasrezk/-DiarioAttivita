@@ -1,4 +1,4 @@
-🟦 DIARIO ATTIVITÀ – SPIEGAZIONE SEMPLICE
+​📓 Diario delle Attività (Activity Diary)
 
 🟩 A COSA SERVE IL PROGRAMMA
 
@@ -17,7 +17,7 @@ Tutte le attività vengono salvate in un file chiamato attivita.txt, così non s
 ##🧱 Come è fatto il programma
 
 1. Classe Attivita
-2. 
+
 2.Rappresenta una singola attività.
 Quando crei un’attività nuova, il costruttore salva:
 
@@ -60,3 +60,10 @@ L’utente aggiunge una o più attività.
 Le attività vengono memorizzate in un vettore.
 
 Alla fine, il programma salva tutto nel file.
+
+Organizzazione Avanzata: Utilizza le mappe (std::map) per collegare le attività a date specifiche e i vettori (std::vector) per gestire liste dinamiche di impegni.
+Interfaccia Intuitiva: Un menu numerato permette di navigare facilmente tra le opzioni:
+Aggiunta di nuove attività.
+Visualizzazione filtrata per giorno.
+Visualizzazione dell'intero archivio.
+Eliminazione di record specifici.
